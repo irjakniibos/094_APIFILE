@@ -7,15 +7,24 @@
         },
         title: {
             type: DataTypes.STRING,
+            allowNull: false
         },
         description: {
             type: DataTypes.STRING,
+            allowNull: false
         },
         author: {
             type: DataTypes.STRING,
+            allowNull: false
         },
-
-    });
+            imageType: DataTypes.STRING,
+            imageName: DataTypes.STRING,
+            imageData: DataTypes.BLOB('long'),
+        },
+        {
+            tableName: 'komik',
+        }
+    );
 
     return Komik;
-}
+};
